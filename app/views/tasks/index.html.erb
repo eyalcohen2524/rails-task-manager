@@ -1,0 +1,9 @@
+<h1>All of the tasks</h1>
+<% @tasks.each do |t| %>
+<p> <%= check_box_tag  "yes"%><%= link_to t.title, task_path(t) %> <%= link_to "Delete", delete_path(t),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %></p>
+<%end%>
+
+<p><%= link_to('new task', new_path)%></p>
+

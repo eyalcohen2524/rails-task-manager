@@ -1,0 +1,5 @@
+<h1><%= @task.title %></h1>
+<button> <%= link_to("edit this task", edit_path(@task)) %> </button>
+<p><%= @task.details %></p>
+<p><%= @task.completed == false ? "This task is not complete yet" : "This task is complete" %></p>
+<p><%= link_to("list of all tasks", tasks_path) %></p>
